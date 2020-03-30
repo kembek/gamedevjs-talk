@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress CheckImageSize -->
 <html lang="en">
 
 <head>
@@ -9,6 +10,10 @@
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
+        }
+
+        h3 {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -141,7 +146,13 @@ ctx.fillRect(10, 10, 150, 100);</code>
 
 <section class="slide">
     <h2>HTML5 Canvas</h2>
-    <h4>Pros/Cons</h4>
+    <h3 style="margin-bottom: 0">Browser Quest</h3>
+    <a href="https://browserquest.herokuapp.com/">https://browserquest.herokuapp.com/</a>
+    <img src="pictures/browserquest.jpg" alt="Browser Quest Game" width="60%">
+</section>
+
+<section class="slide">
+    <h2>HTML5 Canvas</h2>
     <ul>
         <li>✅ Great browser support</li>
         <li>✅ Easy to use api</li>
@@ -152,47 +163,166 @@ ctx.fillRect(10, 10, 150, 100);</code>
 
 <section class="slide">
     <h2>WebGL</h2>
-    <p>Browsers support</p>
-    <p>What's pipeline</p>
-    <p>Shaders</p>
-    <p>Is it hard to code?</p>
-    <p>Code sample of triangle</p>
-    <p>WebGL vs WebGL2</p>
-    <p>Some demos</p>
-    <!-- https://paveldogreat.github.io/WebGL-Fluid-Simulation/ -->
+    <h3>Browser support (WebGL)</h3>
+    <img src="pictures/webgl-caniuse.jpg" alt="WebGL browser support" width="100%">
 </section>
 
 <section class="slide">
-    <h2>Threejs</h2>
-    <p>Pros/cons</p>
-    <p>Notable examples</p>
+    <h2>WebGL</h2>
+    <h3>Browser support (WebGL 2.0)</h3>
+    <img src="pictures/webgl2-caniuse.jpg" alt="WebGL browser support" width="100%">
 </section>
 
 <section class="slide">
-    <h2>Babylon3d</h2>
-    <p>Pros/cons</p>
-    <p>Demos</p>
+    <h2>WebGL</h2>
+    <h3>OpenGL implementation in the browser</h3>
+    <img src="pictures/good-luck.jpg" alt="GL meme" width="70%" style="border: 1px solid black">
 </section>
 
 <section class="slide">
-    <h2>Pixi.js</h2>
-    <p>Pros/cons</p>
-    <p>Demos</p>
+    <h2>WebGL</h2>
+    <h3>Pipeline</h3>
+    <img src="pictures/webgl-pipeline.png" alt="WebGL Pipeline" height="55%">
 </section>
 
 <section class="slide">
-    <h2>A-Frame and React VR</h2>
+    <h2>WebGL</h2>
+    <h3>Shaders</h3>
+    <pre style="font-size: small"><code>
+<span class="comment">// vertex shader</span>
+void main() {
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+}
+<span class="comment">// fragment shader</span>
+void main() {
+  gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+}
+</code></pre>
 </section>
 
 <section class="slide">
-    <h2>Phaser</h2>
+    <h2>WebGL</h2>
+    <h3>Shaders</h3>
+    <p>Result</p>
+    <img src="pictures/shaders-cube.png" alt="Blue cube" height="40%">
 </section>
 
 <section class="slide">
-    <h2>Others</h2>
+    <h2>WebGL</h2>
+    <h3 style="margin-bottom: 0">Demo</h3>
+    <a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/">https://paveldogreat.github.io/WebGL-Fluid-Simulation/</a>
+    <img src="pictures/webgl-fluid.jpg" alt="Fluid WebGL demo" width="60%">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Code sample of triangle</h3>
+    <p>TODO: add a link to the sample</p>
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h5 style="margin-bottom: 0">Doing WebGL for fun</h5>
+    <img src="pictures/webgl-fun.jpg" alt="WebGL meme with triangle" width="40%">
+</section>
+
+<section></section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Three.js</h3>
     <ul>
-        <li>https://github.com/topics/webgl</li>
-        <li>https://github.com/topics/webgl2</li>
+        <li>✅ WebGL abstracted very well</li>
+        <li>✅ Easy to use, great documentation</li>
+        <li>✅ Most popular WebGL library</li>
+        <li>❌ Just a graphics library</li>
+        <li>❌ Some parts are lacking ES Modules support</li>
+    </ul>
+</section>
+
+<section class="slide black">
+    <h2 style="color: white">WebGL</h2>
+    <h3 style="color: white">Three.js</h3>
+    <h4 style="color: white">A lot of sample and production projects: <a style="color: white" href="https://threejs.org/">https://threejs.org/</a></h4>
+    <img class="cover" src="pictures/threejs.jpg" alt="Threejs sample projects" style="opacity: 15%">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Babylon.js</h3>
+    <ul>
+        <li>✅ Stable API</li>
+        <li>✅ Very active community (Three.js oldest bug ~2014, Babylon.js ~few days ago)</li>
+        <li>✅ Written in TypeScript</li>
+        <li>✅/❌ Supported by Microsoft</li>
+        <li>❌ Less popular</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3 style="margin-bottom: 0">Babylon.js</h3>
+    <h4 style="margin-bottom: 0; margin-top: 0;">Demo: <a href="https://www.babylonjs.com/demos/sponza/">https://www.babylonjs.com/demos/sponza/</a></h4>
+    <img src="pictures/sponza.jpg" alt="Babylonjs demo" width="60%">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Pixi.js</h3>
+    <p>Pros/cons</p>
+    <p>Demos</p>
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>A-Frame and React VR</h3>
+    <img src="pictures/ruda-dziewczyna-z-goglami-vr-usmiechasie-jpg-1.jpg" alt="VR stock photo" width="40%">
+    <img src="pictures/there-are-an-awful-lot-of-stock-photos-for-virtual-reality-that-just-consist-of-people-w-incorrectly-239519.jpg" alt="Fake VR">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Phaser</h3>
+    <img src="pictures/phaser.png" alt="Phaser logo" width="40%">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Phaser</h3>
+    <ul>
+        <li>✅ Full blown game engine</li>
+        <li>✅ Easy to use API</li>
+        <li>✅ Most popular JS game engine</li>
+        <li>❌ Some parts are not documented</li>
+        <li>❌ Limited TypeScript support</li>
+        <li>❌ Single person "show"</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Phaser</h3>
+    <p><a href="https://wowsuch.games/ludum-dare-44/">https://wowsuch.games/ludum-dare-44/</a></p>
+    <img src="pictures/pomidorko.jpg" alt="Pomidorko game screenshot" width="55%">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Phaser</h3>
+    <p><a href="https://store.steampowered.com/app/809440/Protolife/">Protolife</a> by Volcanic Giraffe</p>
+    <img src="pictures/protolife.jpg" alt="Protolife game screenshot" width="55%">
+</section>
+
+<section class="slide">
+    <h2>WebGL</h2>
+    <h3>Others</h3>
+    <ul>
+        <li><a href="https://github.com/topics/webgl">https://github.com/topics/webgl</a></li>
+        <li><a href="https://github.com/topics/webgl">https://github.com/topics/webgl</a></li>
+        <li><a href="https://playcanvas.com/">https://playcanvas.com/</a></li>
+        <li><a href="https://www.scirra.com/">Construct 3</a></li>
+        <li><a href="https://www.pandajs.net/">https://www.pandajs.net/</a></li>
+        <li><a href="http://www.voxeljs.com/">http://www.voxeljs.com/</a></li>
     </ul>
 </section>
 
@@ -205,6 +335,16 @@ ctx.fillRect(10, 10, 150, 100);</code>
 
 <section class="slide">
     <h2>Gamepad API</h2>
+    <h3>Browser support</h3>
+    <img src="pictures/gamepad.jpg" alt="Gamepad API support" width="100%">
+    <p style="font-size: small; color: var(--color-red)">* no haptic support everywhere except Firefox though</p>
+</section>
+
+<section class="slide">
+    <h2>Gamepad API</h2>
+    <h3>HTML5 Gamepad Tester</h3>
+    <img src="pictures/gamepad-tester.jpg" alt="Gamepad API tester" width="60%">
+    <p><a href="https://html5gamepad.com/">https://html5gamepad.com/</a></p>
 </section>
 
 <section class="slide">
