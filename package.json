@@ -29,7 +29,8 @@
   "dependencies": {
     "@shower/material": "^2.2.2",
     "@shower/ribbon": "^3.2.3",
-    "shower-core": "^2.1.0"
+    "shower-core": "^2.1.0",
+    "gh-pages": "^2.2.0"
   },
   "devDependencies": {
     "path-exists-cli": "^1.0.0",
@@ -40,7 +41,7 @@
     "start": "shower serve",
     "prepare": "shower prepare --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
     "archive": "shower archive --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
-    "publish": "shower publish --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
+    "publish": "gh-pages -d ./prepared",
     "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
   }
 }
